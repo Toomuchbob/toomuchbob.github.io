@@ -1,0 +1,33 @@
+#about-this-title {
+    margin-left: 1em;
+    text-align: left;
+    clear: both;
+}
+
+#about-this {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    content: '';
+    background-color: whitesmoke;
+    width: 75%;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#about-this-content {
+    text-align: left;
+    width: 90%;
+    padding: 1em;
+
+}
+
+#about-this-pixel {
+    width: 25%;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#flaticon {
+    font-size: .8em;
+}

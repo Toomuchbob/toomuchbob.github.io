@@ -16,10 +16,10 @@ function NavCanvasLinks() {
     };
 
     return (
-        <div>
-            <a href="#aboutMe" id="nav-canvas-links-about-me" onMouseOver={handleMouseOver}>About Me</a>
-            <a href="#portfolio" id="nav-canvas-links-portfolio" onMouseOver={handleMouseOver}>Portfolio</a>
-            <a href="#aboutthis" id="nav-canvas-links-about-this-page" onMouseOver={handleMouseOver}>About This Page</a>
+        <div className="link">
+            <a href="#about-me-title" id="nav-canvas-links-about-me" onMouseOver={handleMouseOver}>About Me</a>
+            <a href="#portfolio-title" id="nav-canvas-links-portfolio" onMouseOver={handleMouseOver}>Portfolio</a>
+            <a href="#about-this-title" id="nav-canvas-links-about-this-page" onMouseOver={handleMouseOver}>About This Page</a>
         </div>
     );
 

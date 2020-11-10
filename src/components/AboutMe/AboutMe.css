@@ -1,0 +1,85 @@
+.social-icon-link {
+    fill: #0084a8;
+}
+
+.social-icon-link :hover {
+    fill: #04C4FB;
+    transition: fill 166ms ease-in;
+}
+
+strong {
+    font-weight: 600;
+}
+
+#about-me-title {
+    margin-left: 1em;
+    text-align: left;
+}
+
+#about-me {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    content: '';
+    background-color: whitesmoke;
+    width: 75%;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#about-me-content {
+    text-align: left;
+    width: 90%;
+    padding: 1em;
+}
+
+#about-me-pixel {
+    width: 25%;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#about-me-description {
+    margin-bottom: 3em;
+}
+
+#proficiencies-title {
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#proficiencies ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    padding: .2em;
+    margin: 0em .1em 3em;
+    text-align: center;
+    list-style: none;
+}
+
+#proficiencies li {
+    font-weight: 400;
+}
+
+#proficiencies li:hover {
+    transition: font-weight 166ms ease-in-out;
+    font-weight: 700;
+}
+
+#socials {
+    text-align: center;
+}
+
+#socials-title {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+#socials a {
+    display: inline-block;
+    margin: .5em;
+}

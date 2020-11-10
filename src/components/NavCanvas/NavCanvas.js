@@ -52,7 +52,7 @@ function NavCanvas() {
   };
 
   //preload async data
-  let preload = (p5) => {
+  let preload = p5 => {
     state.spriteSheet = p5.loadImage('./assets/sprite/p5guy.png');
     state.spriteData = p5.loadJSON('./assets/sprite/p5guy.json');
 
@@ -69,10 +69,14 @@ function NavCanvas() {
 
   };
 
-  //draw to canvas
-  let draw = (p5) => {
+  let windowResized = p5 => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+  }
 
-    p5.background('#261c3d');
+  //draw to canvas
+  let draw = p5 => {
+
+    p5.background('#1e1e1e');
 
     state.currentSprite = state.idleAnim[p5.frameCount % state.idleAnim.length];
 
@@ -101,7 +105,7 @@ function NavCanvas() {
   };
 
   return (
-    <Sketch preload={preload} setup={setup} draw={draw} className="App" style={{ position: 'absolute', zIndex: -1 }} />
+    <Sketch preload={preload} setup={setup} windowResized={windowResized} draw={draw} style={{ position: 'absolute', zIndex: -1 }} />
   );
 };
 

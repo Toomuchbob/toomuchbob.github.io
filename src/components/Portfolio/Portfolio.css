@@ -1,0 +1,30 @@
+#portfolio-title {
+    margin-right: 1em;
+    text-align: right;
+}
+
+
+#portfolio {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+    content: '';
+    background-color: whitesmoke;
+    width: 75%;
+    font-size: 1em;
+    float: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#portfolio-content {
+    text-align: right;
+    float: right;
+    width: 90%;
+    padding: 1em;
+}
+
+#portfolio-pixel {
+    width: 25%;
+    background-color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
