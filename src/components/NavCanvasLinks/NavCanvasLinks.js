@@ -5,10 +5,6 @@ import { NavContext } from "../../contexts/NavContext.js"
 function NavCanvasLinks() {
     const {nav, setNav} = useContext(NavContext);
 
-    // useEffect(() => {
-    //     console.log(nav);
-    // }, [nav])
-
     const handleMouseOver = e => {
 
         setNav(e.target.getBoundingClientRect());

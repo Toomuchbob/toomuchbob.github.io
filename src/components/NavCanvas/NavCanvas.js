@@ -11,8 +11,8 @@ function NavCanvas() {
     spriteSheet: undefined,
     spriteData: undefined,
     currentSprite: undefined,
-    spriteX: 100,
-    spriteY: 96,
+    spriteX: 0,
+    spriteY: 0,
     spriteSpeed: 0,
 
     //initialize animation arrays
@@ -54,7 +54,10 @@ function NavCanvas() {
   //preload async data
   let preload = p5 => {
 
-    if (p5.windowWidth >= 812) {
+    if (p5.windowWidth >= 1280) {
+      state.spriteSheet = p5.loadImage('./assets/sprite/p5guy_300.png');
+      state.spriteData = p5.loadJSON('./assets/sprite/p5guy_300.json');
+    } else if (p5.windowWidth >= 812) {
       state.spriteSheet = p5.loadImage('./assets/sprite/p5guy_200.png');
       state.spriteData = p5.loadJSON('./assets/sprite/p5guy_200.json');
     } else {
@@ -94,6 +97,10 @@ function NavCanvas() {
       };
     };
 
+    //assign sprite Y position to bottom of links bounding box
+    if (nav) {
+      state.spriteY = nav.bottom;
+    }
 
     let diff = p5.mouseX - state.spriteX;
     state.spriteSpeed = Math.sign(diff) + (diff) / 30;
