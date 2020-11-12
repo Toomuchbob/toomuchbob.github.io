@@ -83,3 +83,7 @@ strong {
     display: inline-block;
     margin: .5em;
 }
+
+.show {
+    background-color: black;
+}

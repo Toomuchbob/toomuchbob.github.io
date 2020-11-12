@@ -1,20 +1,52 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import "./AboutMe.css"
 
 function AboutMe() {
 
+    const aboutMeContainer = useRef(null);
+
+    /*---------------------------------------------------------------
+    Used for creating section effect, incomplete
+    -----------------------------------------------------------------
+
+    const restructBoundingClientRect = e => {
+        const { top, right, bottom, left, width, height, x, y } = e.current.getBoundingClientRect();
+
+        return { top, right, bottom, left, width, height, x, y };
+    }
+
+    const onClickHandler = () => {
+
+        const coords = restructBoundingClientRect(aboutMeContainer);
+
+        let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        const svgNS = svg.namespaceURI;
+        let rect = document.createElementNS(svgNS, "rect");
+
+        for (const [key, value] of Object.entries(coords)) {
+            svg.setAttribute(key, value);
+            rect.setAttribute(key, value);
+        };
+
+        rect.setAttribute("fill", "#000000");
+
+        svg.appendChild(rect);
+
+        document.body.prepend(svg);
+    };
+    -----------------------------------------------------------------*/
+
     return (
-        <>
-            <div className="title" id="about-me-title">
-                About Me
-            </div>
-            <div className="content-container" id="about-me">
+        <div id="about-me-container">
+            <div className="title" id="about-me-title">About Me</div> 
+            <div className="content-container" id="about-me" ref={aboutMeContainer} /*onClick={onClickHandler} onClick disabled for above*/>
                 <div id="about-me-content">
                     <p id="about-me-description">
                         Born and raised in Cleveland, Ohio; I've relocated to Charlotte,
                         NC to shift careers from Information Technology to Full-Stack
                         Web Development/Design. Aggressively leveling up my skills, I
-                        want to bring my creativity from <strong>art</strong> and <strong>music</strong> into <strong>web design</strong>.
+                        want to bring my creativity from <strong>art </strong>
+                        and <strong>music</strong> into <strong>web design</strong>.
                     </p>
                     <div id="proficiencies">
                         <span id="proficiencies-title">Proficiencies:</span>
@@ -56,7 +88,7 @@ function AboutMe() {
                 </div>
             </div>
             <div id="about-me-pixel"></div>
-        </>
+        </div>
     );
 };
 

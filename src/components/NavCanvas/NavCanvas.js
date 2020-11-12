@@ -53,8 +53,14 @@ function NavCanvas() {
 
   //preload async data
   let preload = p5 => {
-    state.spriteSheet = p5.loadImage('./assets/sprite/p5guy.png');
-    state.spriteData = p5.loadJSON('./assets/sprite/p5guy.json');
+
+    if (p5.windowWidth >= 812) {
+      state.spriteSheet = p5.loadImage('./assets/sprite/p5guy_200.png');
+      state.spriteData = p5.loadJSON('./assets/sprite/p5guy_200.json');
+    } else {
+      state.spriteSheet = p5.loadImage('./assets/sprite/p5guy.png');
+      state.spriteData = p5.loadJSON('./assets/sprite/p5guy.json');
+    }
 
   };
 
@@ -81,7 +87,7 @@ function NavCanvas() {
     state.currentSprite = state.idleAnim[p5.frameCount % state.idleAnim.length];
 
     if (nav) {
-      if (p5.mouseX > nav.left && p5.mouseX < nav.right) {
+      if (p5.mouseX > nav.left && p5.mouseX < nav.right && p5.mouseY > nav.top && p5.mouseY < nav.bottom) {
         state.currentSprite = state.pointingAnim[p5.frameCount % state.pointingAnim.length];
       } else {
         state.currentSprite = state.idleAnim[p5.frameCount % state.idleAnim.length];
