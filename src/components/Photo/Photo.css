@@ -1,0 +1,28 @@
+.crop-circle {
+    display: block;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: #04C4FB solid 4px;
+    position: fixed;
+    top: 50vh;
+    left: 0px;
+    overflow: hidden;
+    z-index: 2;
+    left: 70vw;
+    transition: left 800ms cubic-bezier(0.6, -0.28, .74, .05), 
+        border 800ms cubic-bezier(0.6, -0.28, .74, .05);
+}
+
+img {
+    width: auto;
+    height: 100%;
+    margin-left: -50px;
+}
+
+.hide-photo {
+    left: 105vw;
+    border: #1e1e1e solid 4px;
+}

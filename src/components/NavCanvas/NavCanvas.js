@@ -87,20 +87,20 @@ function NavCanvas() {
 
     p5.background('#1e1e1e');
 
-    state.currentSprite = state.idleAnim[p5.frameCount % state.idleAnim.length];
-
+    state.currentSprite = state.idleAnim[p5.floor(p5.frameCount * 0.4) % state.idleAnim.length];
+    
     if (nav) {
       if (p5.mouseX > nav.left && p5.mouseX < nav.right && p5.mouseY > nav.top && p5.mouseY < nav.bottom) {
-        state.currentSprite = state.pointingAnim[p5.frameCount % state.pointingAnim.length];
+        state.currentSprite = state.pointingAnim[p5.floor(p5.frameCount * 0.4) % state.pointingAnim.length];
       } else {
-        state.currentSprite = state.idleAnim[p5.frameCount % state.idleAnim.length];
+        state.currentSprite = state.idleAnim[p5.floor(p5.frameCount * 0.4) % state.idleAnim.length];
       };
     };
 
     //assign sprite Y position to bottom of links bounding box
     if (nav) {
-      state.spriteY = nav.bottom;
-    }
+      state.spriteY = nav.bottom + window.scrollY;
+    };
 
     let diff = p5.mouseX - state.spriteX;
     state.spriteSpeed = Math.sign(diff) + (diff) / 30;

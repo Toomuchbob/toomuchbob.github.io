@@ -12,19 +12,14 @@ const Header = () => {
       
         window.addEventListener('scroll', scrollListener);
       
-        // on unmount, remove scrollListener
+        //on unmount, remove scrollListener
         return () => {
           window.removeEventListener('scroll', scrollListener);
         };
       }, []);
 
-    const handleOnClick = () => {
-        console.log(hide);
-        setHide(!hide);
-    };
-
     return (
-        <div className={`header ${hide ? "hide" : ""}`} onClick={handleOnClick}>
+        <div className={`header ${hide ? "hide-header" : ""}`}>
             <span className="text">Portfolio of </span>
             <span className="text">Gino </span>
             <span className="text">Zaccardelli </span>

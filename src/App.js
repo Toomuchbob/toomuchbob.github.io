@@ -6,6 +6,7 @@ import AboutMe from "./components/AboutMe/AboutMe.js";
 import Portfolio from "./components/Portfolio/Portfolio.js"
 import AboutThis from "./components/AboutThis/AboutThis.js"
 import Header from "./components/Header/Header.js";
+import Photo from "./components/Photo/Photo.js"
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <NavCanvas />
         <NavCanvasLinks />
       </NavProvider>
+    <Photo />
       <AboutMe />
       <Portfolio />
       <AboutThis />

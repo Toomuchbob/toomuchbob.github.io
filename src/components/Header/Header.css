@@ -1,13 +1,15 @@
 .header {
     position: fixed;
-    top: 0px;
+    top: 50vh;
     left: 0px;
     overflow: hidden;
     margin-top: 1em;
     margin-left: 1em;
     z-index: 2;
+    color: #04C4FB;
     background-color: rgba(0, 0, 0, 0);
-    transition: left 700ms cubic-bezier(0.6, -0.28, .74, .05);
+    transition: left 800ms cubic-bezier(0.6, -0.28, .74, .05),
+         color 720ms cubic-bezier(0.6, -0.28, .74, .05);
 }
 
 span {
@@ -15,12 +17,12 @@ span {
 }
 
 .text {
-    color: #04C4FB;
-    font-size: .8em;
-    font-weight: 200;
+    font-size: 2.2em;
+    font-weight: 300;
     line-height: 1em;
 }
 
-.hide {
-    left: -130px;
+.hide-header {
+    left: -310px;
+    color: #1e1e1e;
 }
